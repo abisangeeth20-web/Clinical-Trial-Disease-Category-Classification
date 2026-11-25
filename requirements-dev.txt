@@ -1,0 +1,5 @@
+-r requirements.txt
+# for rebuilding / executing the notebook
+nbformat
+nbconvert
+ipykernel

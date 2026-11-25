@@ -1,0 +1,559 @@
+{
+  "best_model": "Linear SVM",
+  "final_estimator": "CalibratedClassifierCV",
+  "input": "brief_summary (raw text) -> TextPreprocessor -> TF-IDF -> classifier",
+  "classes": [
+    "Anxiety",
+    "Breast Cancer",
+    "COPD",
+    "COVID-19",
+    "Glaucoma",
+    "Rheumatoid Arthritis",
+    "Sickle Cell Anemia",
+    "Type 2 Diabetes"
+  ],
+  "best_params": {
+    "tfidf__ngram_range": [
+      1,
+      2
+    ],
+    "tfidf__min_df": 3,
+    "clf__class_weight": null,
+    "clf__C": 0.6
+  },
+  "tfidf_vocabulary_size": 60000,
+  "train_size": 48019,
+  "test_size": 12005,
+  "test_metrics": {
+    "accuracy": 0.9586,
+    "precision_macro": 0.9619,
+    "recall_macro": 0.9485,
+    "f1_macro": 0.9549,
+    "precision_weighted": 0.9589,
+    "recall_weighted": 0.9586,
+    "f1_weighted": 0.9586,
+    "roc_auc_ovr_macro": 0.9978
+  },
+  "train_metrics": {
+    "accuracy": 0.9941,
+    "precision_macro": 0.9944,
+    "recall_macro": 0.9938,
+    "f1_macro": 0.9941,
+    "precision_weighted": 0.9941,
+    "recall_weighted": 0.9941,
+    "f1_weighted": 0.9941,
+    "roc_auc_ovr_macro": 0.9999
+  },
+  "classification_report": {
+    "Breast Cancer": {
+      "precision": 0.9688549618320611,
+      "recall": 0.9760073823438942,
+      "f1-score": 0.9724180202267851,
+      "support": 3251.0
+    },
+    "Type 2 Diabetes": {
+      "precision": 0.9597053726169844,
+      "recall": 0.9727711901624945,
+      "f1-score": 0.9661941112322792,
+      "support": 2277.0
+    },
+    "COVID-19": {
+      "precision": 0.9736842105263158,
+      "recall": 0.9524752475247524,
+      "f1-score": 0.9629629629629629,
+      "support": 2020.0
+    },
+    "Anxiety": {
+      "precision": 0.924123495552067,
+      "recall": 0.9540788762830902,
+      "f1-score": 0.93886230728336,
+      "support": 1851.0
+    },
+    "COPD": {
+      "precision": 0.9399671052631579,
+      "recall": 0.9315403422982885,
+      "f1-score": 0.9357347523536635,
+      "support": 1227.0
+    },
+    "Rheumatoid Arthritis": {
+      "precision": 0.9707602339181286,
+      "recall": 0.9196675900277008,
+      "f1-score": 0.9445234708392604,
+      "support": 722.0
+    },
+    "Glaucoma": {
+      "precision": 0.9857482185273159,
+      "recall": 0.9651162790697675,
+      "f1-score": 0.9753231492361927,
+      "support": 430.0
+    },
+    "Sickle Cell Anemia": {
+      "precision": 0.9719626168224299,
+      "recall": 0.9162995594713657,
+      "f1-score": 0.9433106575963719,
+      "support": 227.0
+    },
+    "accuracy": 0.958600583090379,
+    "macro avg": {
+      "precision": 0.9618507768823076,
+      "recall": 0.9484945583976692,
+      "f1-score": 0.9549161789663594,
+      "support": 12005.0
+    },
+    "weighted avg": {
+      "precision": 0.9588610649668604,
+      "recall": 0.958600583090379,
+      "f1-score": 0.9585995211603242,
+      "support": 12005.0
+    }
+  },
+  "confusion_matrix": [
+    [
+      3173,
+      23,
+      12,
+      29,
+      9,
+      2,
+      2,
+      1
+    ],
+    [
+      21,
+      2215,
+      5,
+      22,
+      10,
+      3,
+      1,
+      0
+    ],
+    [
+      12,
+      13,
+      1924,
+      46,
+      16,
+      5,
+      0,
+      4
+    ],
+    [
+      28,
+      14,
+      12,
+      1766,
+      25,
+      3,
+      3,
+      0
+    ],
+    [
+      19,
+      14,
+      17,
+      30,
+      1143,
+      3,
+      0,
+      1
+    ],
+    [
+      12,
+      22,
+      5,
+      11,
+      8,
+      664,
+      0,
+      0
+    ],
+    [
+      3,
+      2,
+      0,
+      4,
+      3,
+      3,
+      415,
+      0
+    ],
+    [
+      7,
+      5,
+      1,
+      3,
+      2,
+      1,
+      0,
+      208
+    ]
+  ],
+  "model_comparison": [
+    {
+      "model": "Linear SVM",
+      "cv_f1_macro": 0.9472,
+      "cv_f1_std": 0.0023,
+      "test_accuracy": 0.9579,
+      "test_precision_macro": 0.9625,
+      "test_recall_macro": 0.9471,
+      "test_f1_macro": 0.9544,
+      "test_precision_weighted": 0.9583,
+      "test_recall_weighted": 0.9579,
+      "test_f1_weighted": 0.9579,
+      "test_roc_auc_ovr_macro": 0.9969,
+      "tuning_seconds": 81.2,
+      "best_params": "{\"tfidf__ngram_range\": [1, 2], \"tfidf__min_df\": 3, \"clf__class_weight\": null, \"clf__C\": 0.6}"
+    },
+    {
+      "model": "SGD (modified Huber)",
+      "cv_f1_macro": 0.946,
+      "cv_f1_std": 0.001,
+      "test_accuracy": 0.9574,
+      "test_precision_macro": 0.9547,
+      "test_recall_macro": 0.9514,
+      "test_f1_macro": 0.9529,
+      "test_precision_weighted": 0.9581,
+      "test_recall_weighted": 0.9574,
+      "test_f1_weighted": 0.9576,
+      "test_roc_auc_ovr_macro": 0.9959,
+      "tuning_seconds": 69.2,
+      "best_params": "{\"tfidf__ngram_range\": [1, 2], \"tfidf__min_df\": 2, \"clf__class_weight\": \"balanced\", \"clf__alpha\": 0.0001}"
+    },
+    {
+      "model": "Logistic Regression",
+      "cv_f1_macro": 0.9442,
+      "cv_f1_std": 0.0023,
+      "test_accuracy": 0.9563,
+      "test_precision_macro": 0.9561,
+      "test_recall_macro": 0.9488,
+      "test_f1_macro": 0.9523,
+      "test_precision_weighted": 0.9567,
+      "test_recall_weighted": 0.9563,
+      "test_f1_weighted": 0.9564,
+      "test_roc_auc_ovr_macro": 0.9977,
+      "tuning_seconds": 161.6,
+      "best_params": "{\"tfidf__ngram_range\": [1, 2], \"tfidf__min_df\": 2, \"clf__class_weight\": \"balanced\", \"clf__C\": 20}"
+    },
+    {
+      "model": "Random Forest",
+      "cv_f1_macro": 0.9363,
+      "cv_f1_std": 0.0026,
+      "test_accuracy": 0.9457,
+      "test_precision_macro": 0.9585,
+      "test_recall_macro": 0.9268,
+      "test_f1_macro": 0.9414,
+      "test_precision_weighted": 0.9469,
+      "test_recall_weighted": 0.9457,
+      "test_f1_weighted": 0.9456,
+      "test_roc_auc_ovr_macro": 0.9957,
+      "tuning_seconds": 662.5,
+      "best_params": "{\"tfidf__ngram_range\": [1, 1], \"tfidf__min_df\": 5, \"clf__min_samples_leaf\": 1, \"clf__class_weight\": \"balanced_subsample\"}"
+    },
+    {
+      "model": "Complement Naive Bayes",
+      "cv_f1_macro": 0.9329,
+      "cv_f1_std": 0.0014,
+      "test_accuracy": 0.9449,
+      "test_precision_macro": 0.9498,
+      "test_recall_macro": 0.936,
+      "test_f1_macro": 0.9421,
+      "test_precision_weighted": 0.9466,
+      "test_recall_weighted": 0.9449,
+      "test_f1_weighted": 0.9451,
+      "test_roc_auc_ovr_macro": 0.9957,
+      "tuning_seconds": 58.4,
+      "best_params": "{\"tfidf__ngram_range\": [1, 2], \"tfidf__min_df\": 3, \"clf__alpha\": 0.1}"
+    },
+    {
+      "model": "Multinomial Naive Bayes",
+      "cv_f1_macro": 0.9065,
+      "cv_f1_std": 0.0019,
+      "test_accuracy": 0.9232,
+      "test_precision_macro": 0.9274,
+      "test_recall_macro": 0.9121,
+      "test_f1_macro": 0.9185,
+      "test_precision_weighted": 0.9273,
+      "test_recall_weighted": 0.9232,
+      "test_f1_weighted": 0.9239,
+      "test_roc_auc_ovr_macro": 0.9933,
+      "tuning_seconds": 67.5,
+      "best_params": "{\"tfidf__ngram_range\": [1, 2], \"tfidf__min_df\": 3, \"clf__alpha\": 0.03}"
+    }
+  ],
+  "top_terms_per_class": {
+    "Anxiety": [
+      "anxiety",
+      "kinesiophobia",
+      "ocd",
+      "disorder",
+      "mental",
+      "mood",
+      "anxiolytic",
+      "mental health",
+      "anxious",
+      "gad",
+      "obsessive-compulsive",
+      "psychological",
+      "psychiatric",
+      "trichotillomania",
+      "caregiver"
+    ],
+    "Breast Cancer": [
+      "breast",
+      "cancer",
+      "breast cancer",
+      "tumor",
+      "chemotherapy",
+      "mastectomy",
+      "mammography",
+      "lymphedema",
+      "radiation",
+      "woman",
+      "paclitaxel",
+      "radiotherapy",
+      "trastuzumab",
+      "toxicity",
+      "tamoxifen"
+    ],
+    "COPD": [
+      "copd",
+      "chronic",
+      "asthma",
+      "pulmonary",
+      "emphysema",
+      "lung",
+      "cgvhd",
+      "inhaler",
+      "aecopd",
+      "airway",
+      "exacerbation",
+      "inhale",
+      "tiotropium",
+      "chf6001",
+      "obstructive"
+    ],
+    "COVID-19": [
+      "covid-19",
+      "pandemic",
+      "coronavirus",
+      "vaccine",
+      "infection",
+      "immunogenicity",
+      "ritonavir",
+      "post covid-19",
+      "mask",
+      "virus",
+      "pneumonia",
+      "long covid-19",
+      "viral",
+      "covid-19 infection",
+      "lockdown"
+    ],
+    "Glaucoma": [
+      "glaucoma",
+      "iop",
+      "eye",
+      "trabeculectomy",
+      "intraocular",
+      "ocular",
+      "timolol",
+      "xalatan",
+      "ophthalmic",
+      "optic",
+      "visual field",
+      "intraocular pressure",
+      "oct",
+      "latanoprost",
+      "vision"
+    ],
+    "Rheumatoid Arthritis": [
+      "ra",
+      "arthritis",
+      "rheumatoid",
+      "sjogren",
+      "rheumatoid arthritis",
+      "sjogren syndrome",
+      "autoimmune",
+      "adalimumab",
+      "disease activity",
+      "methotrexate",
+      "rheumatology",
+      "abatacept",
+      "hip",
+      "rheumatic",
+      "autoimmune disease"
+    ],
+    "Sickle Cell Anemia": [
+      "scd",
+      "sickle",
+      "sickle cell",
+      "cell disease",
+      "hydroxyurea",
+      "hemoglobinopathy",
+      "sca",
+      "cell",
+      "transfusion",
+      "crisis",
+      "vaso-occlusive",
+      "sickle-cell",
+      "vaso-occlusive crisis",
+      "donor",
+      "blood transfusion"
+    ],
+    "Type 2 Diabetes": [
+      "diabetes",
+      "diabetic",
+      "t2dm",
+      "insulin",
+      "glucose",
+      "type",
+      "t2d",
+      "type diabetes",
+      "metformin",
+      "hba1c",
+      "glycemic",
+      "dm",
+      "semaglutide",
+      "sitagliptin",
+      "liraglutide"
+    ]
+  },
+  "top_confusions": [
+    {
+      "true": "COVID-19",
+      "predicted": "Anxiety",
+      "count": 46
+    },
+    {
+      "true": "COPD",
+      "predicted": "Anxiety",
+      "count": 30
+    },
+    {
+      "true": "Breast Cancer",
+      "predicted": "Anxiety",
+      "count": 29
+    },
+    {
+      "true": "Anxiety",
+      "predicted": "Breast Cancer",
+      "count": 28
+    },
+    {
+      "true": "Anxiety",
+      "predicted": "COPD",
+      "count": 25
+    },
+    {
+      "true": "Breast Cancer",
+      "predicted": "Type 2 Diabetes",
+      "count": 23
+    },
+    {
+      "true": "Rheumatoid Arthritis",
+      "predicted": "Type 2 Diabetes",
+      "count": 22
+    },
+    {
+      "true": "Type 2 Diabetes",
+      "predicted": "Anxiety",
+      "count": 22
+    },
+    {
+      "true": "Type 2 Diabetes",
+      "predicted": "Breast Cancer",
+      "count": 21
+    },
+    {
+      "true": "COPD",
+      "predicted": "Breast Cancer",
+      "count": 19
+    }
+  ],
+  "confidence_vs_accuracy": [
+    {
+      "bin": "<0.5",
+      "n": 315,
+      "accuracy": 0.4413
+    },
+    {
+      "bin": "0.5-0.7",
+      "n": 525,
+      "accuracy": 0.6381
+    },
+    {
+      "bin": "0.7-0.9",
+      "n": 1242,
+      "accuracy": 0.9259
+    },
+    {
+      "bin": ">=0.9",
+      "n": 9923,
+      "accuracy": 0.9961
+    }
+  ],
+  "robustness_keyword_masking": {
+    "original_test": {
+      "accuracy": 0.9586,
+      "f1_macro": 0.9549
+    },
+    "original_model_on_masked_test": {
+      "accuracy": 0.8416,
+      "f1_macro": 0.8322
+    },
+    "retrained_on_masked_text": {
+      "accuracy": 0.9049,
+      "f1_macro": 0.8964
+    }
+  },
+  "raw_pipeline_agreement": 1.0,
+  "examples": {
+    "Breast Cancer": [
+      "This phase II trial studies how well biopsy of breast after chemotherapy works in predicting pathologic response in patients with stage II-IIIA breast cancer undergoing breast conserving surgery. Tumor tissue collected from biopsy before surgery may help to check if chemotherapy destroyed the breast cancer cells and may be compared to the tumor removed during surgery to check if they are the same.",
+      "The goal of this clinical research study is to learn the relationship of high-dose chemotherapy (HDCT) and circulating tumor cells (CTCs) in controlling metastatic breast cancer. The study also will investigate the role of CTCs in breast cancer.",
+      "The purpose of this study is to assess the efficacy, safety, and tolerability of GRN1005 in patients with brain metastases from breast cancer. For patients with HER2 positive metastatic breast cancer, GRN1005 will be assessed in combination with Trastuzumab (Herceptin\u00ae) as per standard-of-care practice.\n\nIn addition, this study will evaluate the ability of 18F-FLT to determine if the amount of change in the uptake in the brain metastases from breast cancer after GRN1005 treatment, correlates with intra-cranial response (for patients enrolled at NCI)."
+    ],
+    "Type 2 Diabetes": [
+      "The aim of this study is to evaluate the effect of vildagliptin on copeptin in comparison to glimepiride, and whether copeptin could be used as a marker for the efficacy of vildagliptin in type 2 diabetes mellitus patients, and how copeptin correlates with other diabetic and cardiac markers.",
+      "The incretin effect is attenuated in patients with type 2 diabetes mellitus partly due to impaired potentiation of beta-cell responsiveness to glucose by glucose dependent insulinotropic polypeptide and glucagon-like peptide-1 respectively. The aim of the present study was to investigate whether 4 weeks of near-normalization of blood glucose could improve the insulin responses to GIP and GLP-1 in patients with type 2 diabetes.",
+      "Primary Objective:\n\nTo compare LixiLan to insulin glargine in glycated hemoglobin (HbA1c) change from baseline to week 26 in patients with type 2 diabetes mellitus.\n\nSecondary Objective:\n\nTo compare overall efficacy and safety of LixiLan to insulin glargine over 26 weeks in patients with type 2 diabetes mellitus."
+    ],
+    "COVID-19": [
+      "In the literature, there are no studies evaluating COVID-19 phobia, quality of life, health anxiety, physical activity level and quality of sleep in patients with bronchiectasis during COVID-19 pandemic. The investigators will evaluate these parameters in patients with bronchiectasis and compare the findings of healthy individuals during COVID-19 pandemic",
+      "In-vitro studies revealed that nafamostat mesylate has antiviral activity against Severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2) and anti-inflammatory and anti-coagulation effect. However, there is no clinical studies on the efficacy of nafamostat in patients with COVID-19.\n\nThis study is conducted to evaluate the clinical efficacy of nafamostate mesylate in adult patients hospitalized with COVID-19 pneumonia.",
+      "The purpose of this study is to describe demographic and clinical characteristics of participants who are hospitalized due to coronavirus 2019 (COVID-19), treatment use for COVID-19 and COVID-19 symptoms, and composite outcomes of COVID-19. This study will also compare composite outcomes between COVID-19 participants treated with and without anticoagulant therapy during follow-up period."
+    ],
+    "Anxiety": [
+      "The aim of the current study was to test the efficacy of an individually administered, brief (5-session) transdiagnostic treatment for anxiety disorders. The current treatment (called F-SET) focuses chiefly on the elimination of anxiety maintaining behaviors and cognitive strategies (so-called \"safety\" aids) among individuals suffering from a range of anxiety disorders including generalized anxiety disorder (GAD), social anxiety disorder (SAD) and panic disorder (PD). We hypothesized that the F-SET protocol would produce better overall outcome relative to a waitlist control.",
+      "The purpose of this study is to examine the effectiveness of virtual reality (VR) delivered exposure therapy for youth with phobias or social anxiety, with and without autism spectrum disorder. The study team is also interested in collecting information to better understand phobias and social anxiety.",
+      "Many patients before the operation feel a high level of anxiety. This felt anxiety can develop due to many reasons such as anesthesia, not being able to wake up from the surgery and being disabled, and fear of feeling pain after the surgery. Music applications, which are among non-pharmacological techniques, are frequently used in the management of pain and anxiety.In this study, the effect of listening to music in the preoperative period on the anxiety of urology patients will be investigated"
+    ],
+    "COPD": [
+      "Chronic obstructive pulmonary disease (COPD)is a multifactorial, progressive chronic lung disease that causes airflow restriction. Study was conducted To Compare the effects of supervised and self-directed pulmonary rehabilitation on cough and sputum expectoration in patients of chronic obstructive pulmonary disease.",
+      "The purpose of this study was to investigate the prevalence of chronic bronchitis in patients suffering from moderate to very severe chronic obstructive pulmonary disease (COPD), and to assess the difference in exacerbation rates in patients suffering from moderate to very severe COPD with chronic bronchitis vs. a population of patients without chronic bronchitis.",
+      "The purpose of this study is to evaluate and compare the efficacy of arformoterol twice a day and tiotropium once a day (dosed sequentially) versus tiotropium once a day alone in subjects with Chronic Obstructive Pulmonary Disease (COPD)."
+    ],
+    "Rheumatoid Arthritis": [
+      "The prevalence of Sjogren's syndrome (SS) in rheumatoid arthritis (RA) patients varies from 3.5 to 31%. Between 30% and 90% of patients with (RA) have dry eye and/or mouth syndrome. To date, no studies have assessed whether RA patients have echostructural changes in their salivary glands suggestive of SS and the factors associated with these changes.The aim of this study is to investigate if there are changes in the echostructure of the salivary glands of RA patients, especially in patients with dry syndrome.",
+      "The purpose of this study is to investigate the effect of vitamin D repletion on disease activity and disability in patients with rheumatoid arthritis.\n\nThe investigators hypothesize that rheumatoid arthritis (RA) patients with vitamin D deficiency have greater disease activity and disability, compared to RA patients with normal vitamin D levels. The investigators also hypothesize that vitamin D treatment in these deficient patients will result in a decrease in RA disease activity and disability.",
+      "Prospective multicenter cross-sectional study evaluating ultrasound of the main salivary glands (2 parotid and 2 submandibular) in patients with Sj\u00f6gren's disease compared with patients with other connective diseases (rheumatoid arthritis (RA), lupus, scleroderma) and control patients (patient with dry syndrome without the above-mentioned autoimmune disease)."
+    ],
+    "Glaucoma": [
+      "Assess the safety and effectiveness of the InnFocus MicroShunt when used to lower intraocular pressure (IOP) in subjects with primary open angle glaucoma where the IOP is not controlled when using maximum tolerated glaucoma medications.",
+      "The primary purpose is to compare the effect of immediate therapy to lower the intraocular pressure (IOP) versus late or no treatment on the progression of newly detected open-angle glaucoma, as measured by increasing visual field loss and/or optic disc changes.\n\nThe secondary purposes are to determine the extent of IOP reduction attained by treatment, to explore factors that may influence glaucoma progression, and to describe the natural history of newly detected glaucoma.",
+      "The purpose of this study is to assess the safety and effectiveness of the Hydrus Microstent for lowering intraocular pressure (IOP) in pseudophakic patients with open-angle glaucoma for whom IOP is not sufficiently controlled on topical hypotensive medication and prior to incisional glaucoma surgery."
+    ],
+    "Sickle Cell Anemia": [
+      "Given large absolute numbers of individuals with sickle cell disease in Nigeria, hydroxyurea therapy for all individuals with sickle cell disease may not be initially feasible; however, a targeted strategy of hydroxyurea use for primary prevention of strokes is an alternative to the standard therapy (observation) for high-risk individuals. The investigators propose a feasibility study, Sickle Cell Disease - Stroke Prevention in Nigeria (SPIN) Trial, to determine whether hydroxyurea can be used for primary prevention of strokes in Nigerian children with sickle cell anemia.",
+      "The main purpose of the study is to evaluate the efficacy and safety of the study drug known as prasugrel for the reduction of Vaso-Occlusive Crisis events in pediatric participants with sickle cell disease. The study will also investigate reduction in daily pain in children who have sickle cell disease.",
+      "This Phase 3 study will assess the safety and efficacy of a single dose of inclacumab, a P-selectin inhibitor, for a vaso-occlusive crisis (VOC) after an index VOC in participants with sickle cell disease (SCD). Participants will be randomized to receive either inclacumab or placebo."
+    ]
+  },
+  "versions": {
+    "python": "3.14.5",
+    "scikit-learn": "1.9.1",
+    "pandas": "3.0.3",
+    "numpy": "2.4.6"
+  }
+}
