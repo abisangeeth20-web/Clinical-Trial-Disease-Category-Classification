@@ -5,7 +5,7 @@ An end-to-end NLP and machine-learning pipeline that reads the **Brief Summary**
 **Domain:** Healthcare Analytics · Medical NLP · Clinical Trial Intelligence
 **Stack:** Python, Pandas, NumPy, NLTK, scikit-learn, Matplotlib, Seaborn, Plotly, Streamlit
 
-🔗 **Live app:** _LIVE_APP_LINK_
+🔗 **Live app:** https://clinical-trial-disease-category-classification.streamlit.app/
 
 ---
 

@@ -49,20 +49,38 @@ _TOKEN_RE = re.compile(r"[a-z][a-z0-9]*(?:-[a-z0-9]+)*")
 
 # ------------------------------------------------------------------ NLTK resources
 def ensure_nltk() -> None:
-    """Make sure the WordNet corpus is available (downloads once into ./nltk_data if missing)."""
+    """Make sure the WordNet corpus is available.
+
+    `nltk_data/corpora/wordnet.zip` is shipped in the repo, so the deployed app never needs to
+    download it. If it is missing, it is downloaded into ./nltk_data (or a temp dir when the
+    project folder is read-only). English lemmatization needs only `wordnet`, not `omw-1.4`.
+    """
+    import tempfile
+
     import nltk
 
     if str(C.NLTK_DIR) not in nltk.data.path:
         nltk.data.path.insert(0, str(C.NLTK_DIR))
-    for res, path in (("wordnet", "corpora/wordnet"), ("omw-1.4", "corpora/omw-1.4")):
+    try:
+        nltk.data.find("corpora/wordnet.zip")
+        return
+    except LookupError:
+        pass
+    try:
+        nltk.data.find("corpora/wordnet")
+        return
+    except LookupError:
+        pass
+    for target in (C.NLTK_DIR, __import__("pathlib").Path(tempfile.gettempdir()) / "nltk_data"):
         try:
-            nltk.data.find(path)
-        except LookupError:
-            try:
-                nltk.data.find(path + ".zip")
-            except LookupError:
-                C.NLTK_DIR.mkdir(parents=True, exist_ok=True)
-                nltk.download(res, download_dir=str(C.NLTK_DIR), quiet=True)
+            target.mkdir(parents=True, exist_ok=True)
+            if nltk.download("wordnet", download_dir=str(target), quiet=True):
+                if str(target) not in nltk.data.path:
+                    nltk.data.path.insert(0, str(target))
+                return
+        except OSError:
+            continue
+    raise LookupError("NLTK WordNet corpus is missing and could not be downloaded.")
 
 
 _LEMMATIZER = None
