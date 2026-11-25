@@ -48,39 +48,70 @@ _TOKEN_RE = re.compile(r"[a-z][a-z0-9]*(?:-[a-z0-9]+)*")
 
 
 # ------------------------------------------------------------------ NLTK resources
-def ensure_nltk() -> None:
-    """Make sure the WordNet corpus is available.
+_NLTK_READY = False
 
-    `nltk_data/corpora/wordnet.zip` is shipped in the repo, so the deployed app never needs to
-    download it. If it is missing, it is downloaded into ./nltk_data (or a temp dir when the
-    project folder is read-only). English lemmatization needs only `wordnet`, not `omw-1.4`.
+
+def _private_nltk_dir():
+    """A fresh data dir owned by this process's user with mode 0700.
+
+    NLTK >= 3.10 refuses (on Linux) to read data from folders that are owned by another account
+    or are group/world-writable. On Streamlit Cloud the repo checkout (/mount/src/...) fails that
+    check, so the shipped WordNet zip is copied into a private temp dir that passes it.
     """
+    import os
     import tempfile
+    from pathlib import Path
+
+    root = Path(tempfile.mkdtemp(prefix="nltk_data_"))      # created with mode 0700
+    corpora = root / "corpora"
+    corpora.mkdir(mode=0o700)
+    if os.name == "posix":
+        os.chmod(root, 0o700)
+        os.chmod(corpora, 0o700)
+    return root, corpora
+
+
+def ensure_nltk() -> None:
+    """Make sure the WordNet corpus is available (English lemmatization needs only `wordnet`).
+
+    1. Already installed somewhere NLTK trusts -> use it.
+    2. Copy the repo's `nltk_data/corpora/wordnet.zip` into a private dir (works offline).
+    3. Last resort: download WordNet into that private dir.
+    """
+    global _NLTK_READY
+    if _NLTK_READY:
+        return
+    import os
+    import shutil
 
     import nltk
 
-    if str(C.NLTK_DIR) not in nltk.data.path:
-        nltk.data.path.insert(0, str(C.NLTK_DIR))
-    try:
-        nltk.data.find("corpora/wordnet.zip")
+    def _found() -> bool:
+        for res in ("corpora/wordnet.zip", "corpora/wordnet"):
+            try:
+                nltk.data.find(res)
+                return True
+            except LookupError:
+                pass
+        return False
+
+    if _found():
+        _NLTK_READY = True
         return
-    except LookupError:
-        pass
-    try:
-        nltk.data.find("corpora/wordnet")
-        return
-    except LookupError:
-        pass
-    for target in (C.NLTK_DIR, __import__("pathlib").Path(tempfile.gettempdir()) / "nltk_data"):
-        try:
-            target.mkdir(parents=True, exist_ok=True)
-            if nltk.download("wordnet", download_dir=str(target), quiet=True):
-                if str(target) not in nltk.data.path:
-                    nltk.data.path.insert(0, str(target))
-                return
-        except OSError:
-            continue
-    raise LookupError("NLTK WordNet corpus is missing and could not be downloaded.")
+
+    root, corpora = _private_nltk_dir()
+    nltk.data.path.insert(0, str(root))
+    shipped = C.NLTK_DIR / "corpora" / "wordnet.zip"
+    if shipped.exists():
+        target = corpora / "wordnet.zip"
+        shutil.copyfile(shipped, target)
+        if os.name == "posix":
+            os.chmod(target, 0o600)
+    if not _found():
+        nltk.download("wordnet", download_dir=str(root), quiet=True)
+    if not _found():
+        raise LookupError(f"NLTK WordNet corpus not usable (shipped zip: {shipped.exists()}, dir: {root}).")
+    _NLTK_READY = True
 
 
 _LEMMATIZER = None
