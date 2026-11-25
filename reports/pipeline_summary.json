@@ -1,0 +1,64 @@
+{
+  "cleaning_log": {
+    "raw_rows": 60337,
+    "raw_columns": 16,
+    "missing_cells_raw": 80526,
+    "missing_by_column_raw": {
+      "official_title": 786,
+      "conditions": 1,
+      "interventions": 6061,
+      "phase": 37001,
+      "sex": 33,
+      "minimum_age": 3216,
+      "maximum_age": 31937,
+      "healthy_volunteers": 1480,
+      "eligibility_criteria": 11
+    },
+    "dropped_missing_summary_or_label": 0,
+    "dropped_exact_duplicate_rows": 0,
+    "dropped_duplicate_nct_id": 0,
+    "dropped_summaries_with_conflicting_labels": 30,
+    "dropped_duplicate_summaries_same_label": 262,
+    "dropped_unknown_label": 0,
+    "rows_after_cleaning": 60045,
+    "missing_cells_after_cleaning_excl_max_age": 0,
+    "class_counts": {
+      "Breast Cancer": 16253,
+      "Type 2 Diabetes": 11385,
+      "COVID-19": 10099,
+      "Anxiety": 9256,
+      "COPD": 6135,
+      "Rheumatoid Arthritis": 3612,
+      "Glaucoma": 2148,
+      "Sickle Cell Anemia": 1136
+    },
+    "dropped_summaries_under_3_tokens_after_cleaning": 21,
+    "final_rows": 60024
+  },
+  "imbalance_ratio": 14.3,
+  "best_model": "Linear SVM",
+  "test_metrics": {
+    "accuracy": 0.9586,
+    "precision_macro": 0.9619,
+    "recall_macro": 0.9485,
+    "f1_macro": 0.9549,
+    "precision_weighted": 0.9589,
+    "recall_weighted": 0.9586,
+    "f1_weighted": 0.9586,
+    "roc_auc_ovr_macro": 0.9978
+  },
+  "robustness_keyword_masking": {
+    "original_test": {
+      "accuracy": 0.9586,
+      "f1_macro": 0.9549
+    },
+    "original_model_on_masked_test": {
+      "accuracy": 0.8416,
+      "f1_macro": 0.8322
+    },
+    "retrained_on_masked_text": {
+      "accuracy": 0.9049,
+      "f1_macro": 0.8964
+    }
+  }
+}

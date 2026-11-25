@@ -1,0 +1,9 @@
+,Breast Cancer,Type 2 Diabetes,COVID-19,Anxiety,COPD,Rheumatoid Arthritis,Glaucoma,Sickle Cell Anemia
+Breast Cancer,3173,23,12,29,9,2,2,1
+Type 2 Diabetes,21,2215,5,22,10,3,1,0
+COVID-19,12,13,1924,46,16,5,0,4
+Anxiety,28,14,12,1766,25,3,3,0
+COPD,19,14,17,30,1143,3,0,1
+Rheumatoid Arthritis,12,22,5,11,8,664,0,0
+Glaucoma,3,2,0,4,3,3,415,0
+Sickle Cell Anemia,7,5,1,3,2,1,0,208

@@ -1,0 +1,121 @@
+disease_category,term,count
+Breast Cancer,cancer,28090
+Breast Cancer,breast,25914
+Breast Cancer,treatment,11200
+Breast Cancer,tumor,7202
+Breast Cancer,therapy,6874
+Breast Cancer,chemotherapy,6013
+Breast Cancer,cell,5928
+Breast Cancer,woman,5813
+Breast Cancer,phase,4672
+Breast Cancer,surgery,4158
+Breast Cancer,receive,3842
+Breast Cancer,safety,3777
+Breast Cancer,metastatic,3683
+Breast Cancer,treat,3478
+Breast Cancer,combination,3343
+Type 2 Diabetes,diabetes,15096
+Type 2 Diabetes,type,10753
+Type 2 Diabetes,insulin,6263
+Type 2 Diabetes,control,6006
+Type 2 Diabetes,glucose,5178
+Type 2 Diabetes,treatment,4901
+Type 2 Diabetes,blood,4851
+Type 2 Diabetes,intervention,3390
+Type 2 Diabetes,mellitus,3050
+Type 2 Diabetes,risk,3014
+Type 2 Diabetes,disease,2964
+Type 2 Diabetes,diabetic,2946
+Type 2 Diabetes,level,2864
+Type 2 Diabetes,safety,2728
+Type 2 Diabetes,improve,2693
+COVID-19,covid-19,24588
+COVID-19,infection,5003
+COVID-19,disease,4547
+COVID-19,treatment,3899
+COVID-19,test,3477
+COVID-19,vaccine,3472
+COVID-19,care,3299
+COVID-19,health,3299
+COVID-19,respiratory,3146
+COVID-19,pandemic,2838
+COVID-19,severe,2777
+COVID-19,symptom,2674
+COVID-19,safety,2617
+COVID-19,coronavirus,2355
+COVID-19,risk,2289
+Anxiety,anxiety,14095
+Anxiety,intervention,6792
+Anxiety,treatment,6675
+Anxiety,control,4693
+Anxiety,pain,4475
+Anxiety,disorder,4157
+Anxiety,health,4061
+Anxiety,child,3878
+Anxiety,symptom,3686
+Anxiety,depression,3528
+Anxiety,therapy,3380
+Anxiety,care,3363
+Anxiety,reduce,3319
+Anxiety,level,3171
+Anxiety,mental,2757
+COPD,copd,8854
+COPD,disease,5016
+COPD,chronic,4295
+COPD,pulmonary,4103
+COPD,treatment,3125
+COPD,obstructive,2687
+COPD,lung,2609
+COPD,exercise,1947
+COPD,respiratory,1826
+COPD,test,1790
+COPD,exacerbation,1717
+COPD,care,1670
+COPD,function,1631
+COPD,improve,1459
+COPD,quality,1410
+Rheumatoid Arthritis,arthritis,3119
+Rheumatoid Arthritis,ra,2908
+Rheumatoid Arthritis,rheumatoid,2725
+Rheumatoid Arthritis,disease,2379
+Rheumatoid Arthritis,treatment,2230
+Rheumatoid Arthritis,safety,1458
+Rheumatoid Arthritis,efficacy,1088
+Rheumatoid Arthritis,activity,945
+Rheumatoid Arthritis,drug,831
+Rheumatoid Arthritis,therapy,778
+Rheumatoid Arthritis,response,761
+Rheumatoid Arthritis,methotrexate,758
+Rheumatoid Arthritis,joint,754
+Rheumatoid Arthritis,active,675
+Rheumatoid Arthritis,receive,643
+Glaucoma,glaucoma,2994
+Glaucoma,eye,1309
+Glaucoma,pressure,1123
+Glaucoma,iop,1014
+Glaucoma,intraocular,801
+Glaucoma,ocular,801
+Glaucoma,treatment,747
+Glaucoma,safety,675
+Glaucoma,surgery,664
+Glaucoma,visual,577
+Glaucoma,efficacy,570
+Glaucoma,disease,428
+Glaucoma,hypertension,426
+Glaucoma,angle,422
+Glaucoma,open-angle,395
+Sickle Cell Anemia,cell,2373
+Sickle Cell Anemia,sickle,1730
+Sickle Cell Anemia,disease,1555
+Sickle Cell Anemia,scd,1192
+Sickle Cell Anemia,blood,1070
+Sickle Cell Anemia,pain,748
+Sickle Cell Anemia,child,554
+Sickle Cell Anemia,treatment,549
+Sickle Cell Anemia,test,451
+Sickle Cell Anemia,adult,345
+Sickle Cell Anemia,crisis,332
+Sickle Cell Anemia,therapy,293
+Sickle Cell Anemia,care,279
+Sickle Cell Anemia,safety,278
+Sickle Cell Anemia,improve,278

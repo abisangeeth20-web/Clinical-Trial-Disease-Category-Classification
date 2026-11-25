@@ -1,0 +1,10 @@
+,summary_word_count,clean_token_count,unique_token_count,lexical_diversity,avg_word_length,n_conditions,n_interventions,min_age_years,n_disease_categories_mentioned
+summary_word_count,1.0,0.98,0.96,-0.66,-0.16,0.04,-0.03,0.0,0.23
+clean_token_count,0.98,1.0,0.98,-0.65,-0.15,0.05,-0.03,0.01,0.24
+unique_token_count,0.96,0.98,1.0,-0.55,-0.12,0.05,-0.04,0.01,0.25
+lexical_diversity,-0.66,-0.65,-0.55,1.0,0.26,-0.06,-0.03,0.01,-0.15
+avg_word_length,-0.16,-0.15,-0.12,0.26,1.0,-0.04,-0.02,-0.0,-0.09
+n_conditions,0.04,0.05,0.05,-0.06,-0.04,1.0,0.04,-0.04,-0.03
+n_interventions,-0.03,-0.03,-0.04,-0.03,-0.02,0.04,1.0,0.04,-0.01
+min_age_years,0.0,0.01,0.01,0.01,-0.0,-0.04,0.04,1.0,0.03
+n_disease_categories_mentioned,0.23,0.24,0.25,-0.15,-0.09,-0.03,-0.01,0.03,1.0

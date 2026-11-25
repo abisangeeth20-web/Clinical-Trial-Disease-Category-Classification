@@ -1,0 +1,97 @@
+disease_category,rank,term,chi2
+Breast Cancer,1,breast,2917.4
+Breast Cancer,2,cancer,2638.3
+Breast Cancer,3,breast cancer,2572.0
+Breast Cancer,4,tumor,1008.4
+Breast Cancer,5,chemotherapy,956.7
+Breast Cancer,6,metastatic,875.6
+Breast Cancer,7,metastatic breast,589.0
+Breast Cancer,8,advance,534.3
+Breast Cancer,9,her2,527.1
+Breast Cancer,10,woman,446.9
+Breast Cancer,11,neoadjuvant,431.2
+Breast Cancer,12,tumor cell,428.9
+Type 2 Diabetes,1,diabetes,3269.3
+Type 2 Diabetes,2,type diabetes,2631.2
+Type 2 Diabetes,3,type,2144.4
+Type 2 Diabetes,4,insulin,1522.9
+Type 2 Diabetes,5,mellitus,1290.7
+Type 2 Diabetes,6,diabetes mellitus,1283.5
+Type 2 Diabetes,7,glucose,1259.1
+Type 2 Diabetes,8,diabetic,969.8
+Type 2 Diabetes,9,t2dm,854.2
+Type 2 Diabetes,10,metformin,808.6
+Type 2 Diabetes,11,glycemic,768.8
+Type 2 Diabetes,12,glycemic control,611.1
+COVID-19,1,covid-19,4915.2
+COVID-19,2,infection,1157.2
+COVID-19,3,covid-19 infection,1015.7
+COVID-19,4,pandemic,914.7
+COVID-19,5,coronavirus,902.7
+COVID-19,6,vaccine,850.5
+COVID-19,7,covid-19 pandemic,616.5
+COVID-19,8,virus,544.2
+COVID-19,9,covid-19 vaccine,494.2
+COVID-19,10,acute respiratory,490.3
+COVID-19,11,vaccination,479.4
+COVID-19,12,disease covid-19,457.0
+Anxiety,1,anxiety,2898.6
+Anxiety,2,disorder,975.2
+Anxiety,3,anxiety disorder,729.7
+Anxiety,4,depression,728.4
+Anxiety,5,mental,507.9
+Anxiety,6,virtual reality,474.6
+Anxiety,7,reality,468.3
+Anxiety,8,child,466.8
+Anxiety,9,ocd,458.9
+Anxiety,10,pain anxiety,448.0
+Anxiety,11,anxiety level,447.2
+Anxiety,12,mental health,436.1
+COPD,1,copd,4316.5
+COPD,2,pulmonary,2124.1
+COPD,3,obstructive,2088.5
+COPD,4,chronic obstructive,2087.3
+COPD,5,obstructive pulmonary,2033.3
+COPD,6,pulmonary disease,2032.6
+COPD,7,disease copd,1574.9
+COPD,8,chronic,1359.3
+COPD,9,exacerbation,1078.3
+COPD,10,lung,661.9
+COPD,11,airway,524.3
+COPD,12,asthma,518.5
+Rheumatoid Arthritis,1,arthritis,4874.7
+Rheumatoid Arthritis,2,rheumatoid,4641.6
+Rheumatoid Arthritis,3,rheumatoid arthritis,4555.7
+Rheumatoid Arthritis,4,ra,3337.6
+Rheumatoid Arthritis,5,arthritis ra,1933.0
+Rheumatoid Arthritis,6,methotrexate,1576.9
+Rheumatoid Arthritis,7,active rheumatoid,1012.6
+Rheumatoid Arthritis,8,disease activity,921.9
+Rheumatoid Arthritis,9,mtx,858.2
+Rheumatoid Arthritis,10,sjogren,616.8
+Rheumatoid Arthritis,11,adalimumab,613.4
+Rheumatoid Arthritis,12,joint,581.0
+Glaucoma,1,glaucoma,7042.1
+Glaucoma,2,ocular,2642.1
+Glaucoma,3,intraocular,2626.0
+Glaucoma,4,iop,2560.2
+Glaucoma,5,intraocular pressure,2431.2
+Glaucoma,6,ocular hypertension,1956.3
+Glaucoma,7,eye,1932.7
+Glaucoma,8,open-angle,1861.5
+Glaucoma,9,open-angle glaucoma,1851.5
+Glaucoma,10,glaucoma ocular,1549.3
+Glaucoma,11,pressure iop,1406.6
+Glaucoma,12,angle,1402.8
+Sickle Cell Anemia,1,sickle,7332.8
+Sickle Cell Anemia,2,sickle cell,7193.9
+Sickle Cell Anemia,3,cell disease,5612.0
+Sickle Cell Anemia,4,scd,4233.1
+Sickle Cell Anemia,5,disease scd,2267.7
+Sickle Cell Anemia,6,hydroxyurea,1326.8
+Sickle Cell Anemia,7,vaso-occlusive,1168.2
+Sickle Cell Anemia,8,cell anemia,1117.3
+Sickle Cell Anemia,9,cell,1067.9
+Sickle Cell Anemia,10,child sickle,1038.5
+Sickle Cell Anemia,11,anemia,1037.2
+Sickle Cell Anemia,12,vaso-occlusive crisis,907.5

@@ -1,0 +1,11 @@
+true,predicted,count
+COVID-19,Anxiety,46
+COPD,Anxiety,30
+Breast Cancer,Anxiety,29
+Anxiety,Breast Cancer,28
+Anxiety,COPD,25
+Breast Cancer,Type 2 Diabetes,23
+Rheumatoid Arthritis,Type 2 Diabetes,22
+Type 2 Diabetes,Anxiety,22
+Type 2 Diabetes,Breast Cancer,21
+COPD,Breast Cancer,19

@@ -1,0 +1,17 @@
+,dtype,missing,missing_pct,unique
+source_condition_query,str,0,0.0,8
+nct_id,str,0,0.0,60337
+title,str,0,0.0,60191
+official_title,str,786,1.3,59272
+brief_summary,str,0,0.0,60064
+conditions,str,1,0.0,26460
+interventions,str,6061,10.05,46807
+overall_status,str,0,0.0,13
+study_type,str,0,0.0,3
+phase,str,37001,61.32,7
+sex,str,33,0.05,3
+minimum_age,str,3216,5.33,142
+maximum_age,str,31937,52.93,182
+healthy_volunteers,string,1480,2.45,2
+eligibility_criteria,str,11,0.02,59872
+clinicaltrials_url,str,0,0.0,60337
