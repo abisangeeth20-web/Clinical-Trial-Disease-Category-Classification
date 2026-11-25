@@ -1,0 +1,12 @@
+# Files larger than GitHub's 25 MB web-upload limit (gzip copies / parts are committed instead)
+clinical_trials_raw_patient2trial_conditions.csv
+data/processed/cleaned_clinical_trials.csv
+
+# Local caches
+nltk_data/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.streamlit/secrets.toml
+pipeline_log.txt
+.venv/
